@@ -6,7 +6,7 @@ Once instantiated, the Vagrantfile reads a list containing the custom machine se
 
 + bento/rockylinux-9.4
 + bento/ubuntu-24.04
-+ bento/debian-i12.6
++ bento/debian-12.6
 + bento/opensuse-leap-15.6
 
 In addition to the Vagrant box name, the custom machine settings include a hostname, private IP address, and host SSH port.

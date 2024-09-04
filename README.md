@@ -13,13 +13,13 @@ In addition to the Vagrant box name, the custom machine settings include a hostn
 
 The hostname value is also applied as the VirtualBox name. Custom values are also provided for the VirtualBox memory, cpus, and gui options.
 
-For each box, the Vagrant Ansible Local provisioner executes [playbook.yml](./playbook.yml). This playbook upgrades the packages each machine to the latest versions.
+For each box, the Vagrant Ansible Local provisioner executes [playbook.yml](./playbook.yml). This playbook upgrades the packages on each machine to the latest versions.
 
 ## Getting Started
 
 ### Dependencies
 
-Vagrant and the VirtualBox provider must be installed on the host machine. While Vagrant does support other providers, such as VMware and Hyper-V, the [Vagrantfile](./Vagrantfile) in this repository is written specifically for VirtualBox.
+Vagrant and the VirtualBox provider must be installed on the host machine. While Vagrant does support other providers, such as VMware and Hyper-V, the [Vagrantfile](./Vagrantfile) in this repository include provider-specific configuration options for VirtualBox. As such, to use the Vagrantfile with a different provider, the options in the provider block may need to be modified.
 
 ### Installation
 To install the files, clone the [vagrant-linux-distros](.) repo or download the files to a folder on the local host.

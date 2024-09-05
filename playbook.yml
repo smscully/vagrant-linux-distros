@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Install Updates (RHEL/Rocky)
+    dnf:
+      name: "*"
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Rocky"
+
+  - name: Install Updates (Debian/Ubuntu)
+    apt:
+      name: "*"
+      state: latest
+      update_cache: yes
+    when: ansible_distribution in ["Debian", "Ubuntu"]
+
+  - name: Install Updates (OpenSUSE)
+    community.general.zypper:
+      name: "*"
+      state: latest
+      update_cache: true
+    when: ansible_distribution == "openSUSE Leap"
